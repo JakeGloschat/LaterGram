@@ -17,6 +17,10 @@
 		23BCFEB929BFC56100664804 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 23BCFEB829BFC56100664804 /* FirebaseStorage */; };
 		23BCFEBB29BFCAAD00664804 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23BCFEBA29BFCAAD00664804 /* GoogleService-Info.plist */; };
 		23BCFEBD29BFCD9200664804 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCFEBC29BFCD9200664804 /* Post.swift */; };
+		23BCFEBF29BFD31600664804 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCFEBE29BFD31600664804 /* PostViewController.swift */; };
+		23BCFEC129BFD76900664804 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCFEC029BFD76900664804 /* PostViewModel.swift */; };
+		23BCFEC429BFD7A700664804 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCFEC329BFD7A700664804 /* FirebaseService.swift */; };
+		23BCFEC629BFD7CB00664804 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCFEC529BFD7CB00664804 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		23BCFEAF29BFC0B000664804 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		23BCFEBA29BFCAAD00664804 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23BCFEBC29BFCD9200664804 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		23BCFEBE29BFD31600664804 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		23BCFEC029BFD76900664804 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		23BCFEC329BFD7A700664804 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		23BCFEC529BFD7CB00664804 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +72,13 @@
 		23BCFE9829BFBF7100664804 /* LaterGram */ = {
 			isa = PBXGroup;
 			children = (
+				23BCFEC229BFD78C00664804 /* Helper Files */,
 				23BCFEAE29BFC0A600664804 /* Models */,
 				23BCFE9F29BFBF7100664804 /* Main.storyboard */,
 				23BCFEBA29BFCAAD00664804 /* GoogleService-Info.plist */,
 				23BCFEAD29BFC02900664804 /* Resources */,
+				23BCFEBE29BFD31600664804 /* PostViewController.swift */,
+				23BCFEC029BFD76900664804 /* PostViewModel.swift */,
 			);
 			path = LaterGram;
 			sourceTree = "<group>";
@@ -91,6 +102,15 @@
 				23BCFEBC29BFCD9200664804 /* Post.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		23BCFEC229BFD78C00664804 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				23BCFEC329BFD7A700664804 /* FirebaseService.swift */,
+				23BCFEC529BFD7CB00664804 /* DateHelper.swift */,
+			);
+			path = "Helper Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23BCFEC129BFD76900664804 /* PostViewModel.swift in Sources */,
+				23BCFEC629BFD7CB00664804 /* DateHelper.swift in Sources */,
 				23BCFE9A29BFBF7100664804 /* AppDelegate.swift in Sources */,
 				23BCFE9C29BFBF7100664804 /* SceneDelegate.swift in Sources */,
 				23BCFEB029BFC0B000664804 /* User.swift in Sources */,
+				23BCFEC429BFD7A700664804 /* FirebaseService.swift in Sources */,
 				23BCFEBD29BFCD9200664804 /* Post.swift in Sources */,
+				23BCFEBF29BFD31600664804 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
