@@ -9,6 +9,15 @@ import UIKit
 
 class Post {
     
+    enum Key {
+        static let title = "title"
+        static let date = "date"
+        static let body = "body"
+        static let image = "image"
+        static let uuid = "uuid"
+        static let collectionType = "posts"
+    }
+    
     var postTitle: String
     var postDate: Date
     var postBody: String
@@ -17,11 +26,11 @@ class Post {
     
     var dictionaryRepresentation: [String: AnyHashable] {
         
-        ["Title": self.postTitle,
-         "Date": self.postDate,
-         "Body": self.postBody,
-         "Image": self.postImage,
-         "uuid": self.uuid
+        [Key.title: self.postTitle,
+         Key.date: self.postDate.timeIntervalSince1970,
+         Key.body: self.postBody,
+         Key.image: self.postImage,
+         Key.uuid: self.uuid
         ]
     }
     
@@ -31,6 +40,19 @@ class Post {
         self.postBody = postBody
         self.postImage = postImage
         self.uuid = uuid
+    }
+}
+
+extension Post {
+    convenience init?(fromDictionary dictionary: [String: Any]) {
+        guard let title = dictionary[Key.title] as? String,
+              let date = dictionary[Key.date] as? Double,
+              let body = dictionary[Key.body] as? String,
+             // let image = dictionary[Key.image] as? UIImage,
+              let uuid = dictionary[Key.uuid] as? String else
+        {print("Failed to initialize object ; Check the date") ; return nil }
+        //TODO: ADD IMAGE
+        self.init(postTitle: title, postDate: Date(timeIntervalSince1970: date), postBody: body, uuid: uuid)
     }
 }
 

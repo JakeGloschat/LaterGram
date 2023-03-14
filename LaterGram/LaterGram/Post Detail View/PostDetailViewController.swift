@@ -7,20 +7,22 @@
 
 import UIKit
 
-class PostViewController: UIViewController {
+class PostDetailViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var postTitleTextField: UITextField!
     @IBOutlet weak var postBodyTextField: UITextView!
-    @IBOutlet weak var addButtonLabel: UIButton!
+    @IBOutlet weak var postDateLabel: UILabel!
+    
     
     // MARK: - Properties
-    var viewModel: PostViewModel!
+    var viewModel: PostDetailViewModel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = PostViewModel()
+        updateUI()
+        //viewModel = PostDetailViewModel()
         
     }
     
@@ -38,12 +40,20 @@ class PostViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func addButtonTapped(_ sender: Any) {
+     
+    @IBAction func saveButtonTapped(_ sender: Any) {
         guard let title = postTitleTextField.text,
               let body = postBodyTextField.text else { return }
-        
+    
         viewModel.save(title: title, body: body)
-     //   self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func updateUI () {
+        guard let post = viewModel.post else { return }
+        postTitleTextField.text = post.postTitle
+        postBodyTextField.text = post.postBody
+        postDateLabel.text = post.postDate.stringValue()
     }
     
 }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "BE0F3B50-CF27-41BC-95D5-3D11DBA11221"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52C3665C-6907-44B2-814F-6472E95BC26E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LaterGram/Models/Post.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "init?(fromDictionary:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52C3665C-6907-44B2-814F-6472E95BC26E - 225c083807593a99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LaterGram.Post.__allocating_init(fromDictionary: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;LaterGram.Post&gt;"
+                  moduleName = "LaterGram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/handz/Developer/Stateful/Unit%207/Week%20Project/LaterGram/LaterGram/LaterGram/Models/Post.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+               <Location
+                  uuid = "52C3665C-6907-44B2-814F-6472E95BC26E - 225c083807593a99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LaterGram.Post.__allocating_init(fromDictionary: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;LaterGram.Post&gt;"
+                  moduleName = "LaterGram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/handz/Developer/Stateful/Unit%207/Week%20Project/LaterGram/LaterGram/LaterGram/Models/Post.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "311A3A62-B312-4953-9BEE-BE2921892673"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LaterGram/Models/Post.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "init?(fromDictionary:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "311A3A62-B312-4953-9BEE-BE2921892673 - 225c083807593afa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LaterGram.Post.__allocating_init(fromDictionary: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;LaterGram.Post&gt;"
+                  moduleName = "LaterGram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/handz/Developer/Stateful/Unit%207/Week%20Project/LaterGram/LaterGram/LaterGram/Models/Post.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1312">
+               </Location>
+               <Location
+                  uuid = "311A3A62-B312-4953-9BEE-BE2921892673 - 225c083807593afa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LaterGram.Post.__allocating_init(fromDictionary: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;LaterGram.Post&gt;"
+                  moduleName = "LaterGram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/handz/Developer/Stateful/Unit%207/Week%20Project/LaterGram/LaterGram/LaterGram/Models/Post.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1584">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E67104F5-9D1A-4412-AF08-20B1B8CB0F6A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LaterGram/Models/Post.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "init?(fromDictionary:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
