@@ -13,7 +13,6 @@ class Post {
         static let title = "title"
         static let date = "date"
         static let body = "body"
-        static let image = "image"
         static let uuid = "uuid"
         static let collectionType = "posts"
         static let imageURL = "imageURL"
@@ -22,7 +21,6 @@ class Post {
     var postTitle: String
     var postDate: Date
     var postBody: String
-    var postImage: UIImage?
     let uuid: String
     var imageURL: String
     
@@ -31,17 +29,15 @@ class Post {
         [Key.title: self.postTitle,
          Key.date: self.postDate.timeIntervalSince1970,
          Key.body: self.postBody,
-         Key.image: self.postImage,
          Key.uuid: self.uuid,
          Key.imageURL: self.imageURL
         ]
     }
     
-    init(postTitle: String, postDate: Date = Date(), postBody: String, postImage: UIImage? = nil, uuid: String = UUID().uuidString, imageURL: String) {
+    init(postTitle: String, postDate: Date = Date(), postBody: String, uuid: String = UUID().uuidString, imageURL: String) {
         self.postTitle = postTitle
         self.postDate = postDate
         self.postBody = postBody
-        self.postImage = postImage
         self.uuid = uuid
         self.imageURL = imageURL
     }

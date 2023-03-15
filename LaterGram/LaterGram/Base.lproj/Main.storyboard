@@ -120,51 +120,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fD-ed-PuZ">
-                                <rect key="frame" x="46" y="103" width="97" height="34"/>
+                                <rect key="frame" x="4" y="107" width="385" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post Body Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-g4-RGT">
-                                <rect key="frame" x="76" y="145" width="241" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="w9d-Dm-w85"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTm-CL-9lx">
-                                <rect key="frame" x="146" y="347" width="61" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <rect key="frame" x="146" y="787.66666666666663" width="101" height="34.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="c9z-9W-odJ" eventType="touchUpInside" id="2V4-Kp-0dc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Post Date)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUr-7g-JWr">
-                                <rect key="frame" x="286" y="313" width="99" height="21"/>
+                                <rect key="frame" x="286" y="713" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="csb-Dh-1Zn">
+                                <rect key="frame" x="46.666666666666657" y="149" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Tuf-Al-xX5"/>
+                                    <constraint firstAttribute="width" constant="300" id="gdD-F4-4yu"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post Body Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-g4-RGT">
+                                <rect key="frame" x="4" y="457" width="385" height="236"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PvH-K3-U2I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PvH-K3-U2I" firstAttribute="trailing" secondItem="0fD-ed-PuZ" secondAttribute="trailing" constant="250" id="6gT-cR-wfO"/>
-                            <constraint firstItem="ABi-g4-RGT" firstAttribute="centerX" secondItem="h2c-k4-QyI" secondAttribute="centerX" id="C8f-d7-uUL"/>
-                            <constraint firstItem="PvH-K3-U2I" firstAttribute="bottom" secondItem="rTm-CL-9lx" secondAttribute="bottom" constant="387" id="EUQ-BF-zi1"/>
-                            <constraint firstItem="0fD-ed-PuZ" firstAttribute="leading" secondItem="PvH-K3-U2I" secondAttribute="leading" constant="46" id="N10-pf-sW4"/>
+                            <constraint firstItem="OUr-7g-JWr" firstAttribute="top" secondItem="ABi-g4-RGT" secondAttribute="bottom" constant="20" id="9af-uI-F4s"/>
+                            <constraint firstItem="PvH-K3-U2I" firstAttribute="trailing" secondItem="0fD-ed-PuZ" secondAttribute="trailing" constant="4" id="L4j-JZ-1b8"/>
+                            <constraint firstItem="0fD-ed-PuZ" firstAttribute="leading" secondItem="PvH-K3-U2I" secondAttribute="leading" constant="4" id="LyQ-RV-1Fk"/>
+                            <constraint firstItem="OUr-7g-JWr" firstAttribute="trailing" secondItem="h2c-k4-QyI" secondAttribute="trailingMargin" id="OGq-v7-VmH"/>
                             <constraint firstItem="rTm-CL-9lx" firstAttribute="leading" secondItem="PvH-K3-U2I" secondAttribute="leading" constant="146" id="OOb-bF-HyI"/>
                             <constraint firstItem="OUr-7g-JWr" firstAttribute="leading" secondItem="PvH-K3-U2I" secondAttribute="leading" constant="286" id="P8u-sy-K8v"/>
-                            <constraint firstItem="OUr-7g-JWr" firstAttribute="top" secondItem="ABi-g4-RGT" secondAttribute="bottom" constant="40" id="S1S-oP-Cd4"/>
-                            <constraint firstItem="ABi-g4-RGT" firstAttribute="top" secondItem="0fD-ed-PuZ" secondAttribute="bottom" constant="8" id="Uqy-fN-EYN"/>
-                            <constraint firstItem="ABi-g4-RGT" firstAttribute="leading" secondItem="PvH-K3-U2I" secondAttribute="leading" constant="76" id="VrI-KZ-KlH"/>
-                            <constraint firstItem="rTm-CL-9lx" firstAttribute="top" secondItem="OUr-7g-JWr" secondAttribute="bottom" constant="13" id="huo-PA-Daw"/>
-                            <constraint firstItem="rTm-CL-9lx" firstAttribute="top" secondItem="ABi-g4-RGT" secondAttribute="bottom" constant="74" id="ice-92-dLB"/>
                             <constraint firstItem="PvH-K3-U2I" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rTm-CL-9lx" secondAttribute="trailing" symbolic="YES" id="jyZ-pi-8yg"/>
-                            <constraint firstItem="PvH-K3-U2I" firstAttribute="trailing" secondItem="OUr-7g-JWr" secondAttribute="trailing" constant="8" id="yAd-5A-OOa"/>
+                            <constraint firstAttribute="bottom" secondItem="rTm-CL-9lx" secondAttribute="bottom" constant="30" id="lzJ-5K-3gx"/>
+                            <constraint firstItem="ABi-g4-RGT" firstAttribute="leading" secondItem="PvH-K3-U2I" secondAttribute="leading" constant="4" id="nvd-kB-pEz"/>
+                            <constraint firstItem="csb-Dh-1Zn" firstAttribute="top" secondItem="0fD-ed-PuZ" secondAttribute="bottom" constant="8" id="s4U-qv-phX"/>
+                            <constraint firstItem="PvH-K3-U2I" firstAttribute="trailing" secondItem="ABi-g4-RGT" secondAttribute="trailing" constant="4" id="v9y-b1-lbW"/>
+                            <constraint firstItem="rTm-CL-9lx" firstAttribute="centerX" secondItem="PvH-K3-U2I" secondAttribute="centerX" id="wft-oq-5hk"/>
+                            <constraint firstItem="0fD-ed-PuZ" firstAttribute="top" secondItem="PvH-K3-U2I" secondAttribute="top" constant="4" id="xMT-hG-QJ5"/>
+                            <constraint firstItem="PvH-K3-U2I" firstAttribute="bottom" secondItem="OUr-7g-JWr" secondAttribute="bottom" constant="35" id="ymr-KE-Ajm"/>
+                            <constraint firstItem="csb-Dh-1Zn" firstAttribute="centerX" secondItem="PvH-K3-U2I" secondAttribute="centerX" id="zAS-2a-xpg"/>
+                            <constraint firstItem="ABi-g4-RGT" firstAttribute="top" secondItem="csb-Dh-1Zn" secondAttribute="bottom" constant="8" id="zsm-Ec-v6c"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Z3x-VW-wpu"/>
@@ -172,6 +178,7 @@
                     <connections>
                         <outlet property="postBodyTextField" destination="ABi-g4-RGT" id="6eJ-Ib-0gn"/>
                         <outlet property="postDateLabel" destination="OUr-7g-JWr" id="JeN-JE-Vaw"/>
+                        <outlet property="postImageView" destination="csb-Dh-1Zn" id="9KV-Gh-dsZ"/>
                         <outlet property="postTitleTextField" destination="0fD-ed-PuZ" id="q5F-7G-5Dg"/>
                     </connections>
                 </viewController>

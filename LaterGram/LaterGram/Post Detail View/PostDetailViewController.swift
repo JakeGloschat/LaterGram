@@ -13,6 +13,7 @@ class PostDetailViewController: UIViewController {
     @IBOutlet weak var postTitleTextField: UITextField!
     @IBOutlet weak var postBodyTextField: UITextView!
     @IBOutlet weak var postDateLabel: UILabel!
+    @IBOutlet weak var postImageView: UIImageView!
     
     
     // MARK: - Properties
@@ -43,9 +44,10 @@ class PostDetailViewController: UIViewController {
      
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let title = postTitleTextField.text,
-              let body = postBodyTextField.text else { return }
+              let body = postBodyTextField.text,
+        let image = postImageView.image else { return }
     
-        viewModel.save(title: title, body: body)
+        viewModel.
         self.navigationController?.popViewController(animated: true)
     }
     

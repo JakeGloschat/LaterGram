@@ -8,29 +8,46 @@
 import UIKit
 import FirebaseFirestore
 
+protocol PostDetailViewModelDelegate: AnyObject {
+    func imageSuccessfullySaved()
+}
+
 struct PostDetailViewModel {
     
     // MARK: - Properties
     var post: Post?
     let service: FirebaseSyncable // removes concrete type
-    init(post: Post? = nil, serviceInjected: FirebaseSyncable = Firebaseservice()) {
+    private weak var delegate: PostDetailViewModelDelegate?
+    init(post: Post? = nil, serviceInjected: FirebaseSyncable = Firebaseservice(), delegate: PostDetailViewModelDelegate) {
         self.post = post
         service = serviceInjected
+        self.delegate = delegate
     }
     
-    func save(title: String, body: String) {
-        if post != nil {
-            updatePost(with: title, body: body)
+    func save(title: String, body: String, image: UIImage) {
+        if let post = post {
+            post.postTitle = title
+            post.postBody = body
+            service.update(post, with: image) {
+                self.delegate?.imageSuccessfullySaved()
+            }
         } else {
-            let post = Post(postTitle: title, postBody: body)
-            service.save(post: post)
+            service.save(title: title, body: body, image: image) {
+                self.delegate?.imageSuccessfullySaved()
+            }
         }
     }
     
-    private func updatePost(with title: String, body: String) {
+    func getImage(completion: @escaping (UIImage?) -> Void) {
         guard let post = post else { return }
-        post.postTitle = title
-        post.postBody = body
-        service.save(post: post)
+        service.fetchImage(from: post) { result in
+            switch result {
+            case .success(let image):
+                completion(image)
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(nil)
+            }
+        }
     }
 }
