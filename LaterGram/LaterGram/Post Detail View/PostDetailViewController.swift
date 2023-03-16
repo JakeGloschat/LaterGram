@@ -22,33 +22,20 @@ class PostDetailViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.tabBar.isHidden = true
+        setupImageView()
         updateUI()
-        //viewModel = PostDetailViewModel()
-        
-    }
-    
-    
-    
-    
-    
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     
     // MARK: - Actions
      
-    @IBAction func saveButtonTapped(_ sender: Any) {
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
         guard let title = postTitleTextField.text,
               let body = postBodyTextField.text,
-        let image = postImageView.image else { return }
+        let image = postImageView.image else
+        { return }
     
-        viewModel.
-        self.navigationController?.popViewController(animated: true)
+        viewModel.save(title: title, body: body, image: image)
     }
     
     private func updateUI () {
@@ -56,6 +43,40 @@ class PostDetailViewController: UIViewController {
         postTitleTextField.text = post.postTitle
         postBodyTextField.text = post.postBody
         postDateLabel.text = post.postDate.stringValue()
+        
+        viewModel.getImage { image in
+            self.postImageView.image = image
+        }
     }
     
+    func setupImageView() {
+        postImageView.contentMode = .scaleAspectFit
+        postImageView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
+        postImageView.addGestureRecognizer(tapGesture)
+    }
+                                                
+    @objc func imageViewTapped() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true)
+    }
+}
+
+// MARK: - Extension
+extension PostDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
+        postImageView.image = image
+    }
+}
+
+// MARK: - PostDetailViewModelDelegate
+extension PostDetailViewController: PostDetailViewModelDelegate {
+    func imageSuccessfullySaved() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

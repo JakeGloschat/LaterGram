@@ -31,7 +31,7 @@ struct Firebaseservice: FirebaseSyncable {
     let ref = Firestore.firestore()
     let storage = Storage.storage().reference()
     
-    
+    // MARK: - Functions
     func save(title: String, body: String, image: UIImage, completion: @escaping () -> Void) {
         
         let uuid = UUID().uuidString

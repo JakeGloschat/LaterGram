@@ -61,10 +61,16 @@ class PostListTableViewController: UITableViewController {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             
             let post = viewModel.posts[indexPath.row]
-            destination.viewModel = PostDetailViewModel(post: post)
+            destination.viewModel = PostDetailViewModel(post: post, delegate: destination.self)
         } else {
-            destination.viewModel = PostDetailViewModel()
+            destination.viewModel = PostDetailViewModel(delegate: destination.self)
         }
+    }
+    // MARK: - Action
+    
+    @IBAction func signOutButtonTapped(_ sender: Any) {
+        let viewModel = CreateAccountViewModel()
+        viewModel.signOutAccount()
     }
 }
 
