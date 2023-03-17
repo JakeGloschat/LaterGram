@@ -17,6 +17,8 @@
 		23560F4129C4EF1800E037B1 /* UserFeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23560F4029C4EF1800E037B1 /* UserFeedCollectionViewController.swift */; };
 		23560F4329C4F06600E037B1 /* UserFeedCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23560F4229C4F06600E037B1 /* UserFeedCollectionViewModel.swift */; };
 		23560F4629C4F47D00E037B1 /* UserFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23560F4529C4F47D00E037B1 /* UserFeedCollectionViewCell.swift */; };
+		239969B329C526910077664B /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239969B229C526910077664B /* FeedDetailViewController.swift */; };
+		239969B529C5272E0077664B /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239969B429C5272E0077664B /* FeedDetailViewModel.swift */; };
 		23BCFE9A29BFBF7100664804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCFE9929BFBF7100664804 /* AppDelegate.swift */; };
 		23BCFE9C29BFBF7100664804 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BCFE9B29BFBF7100664804 /* SceneDelegate.swift */; };
 		23BCFEA129BFBF7100664804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BCFE9F29BFBF7100664804 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		23560F4029C4EF1800E037B1 /* UserFeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedCollectionViewController.swift; sourceTree = "<group>"; };
 		23560F4229C4F06600E037B1 /* UserFeedCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedCollectionViewModel.swift; sourceTree = "<group>"; };
 		23560F4529C4F47D00E037B1 /* UserFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		239969B229C526910077664B /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		239969B429C5272E0077664B /* FeedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewModel.swift; sourceTree = "<group>"; };
 		23BCFE9629BFBF7100664804 /* LaterGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaterGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BCFE9929BFBF7100664804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23BCFE9B29BFBF7100664804 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			children = (
 				23560F4029C4EF1800E037B1 /* UserFeedCollectionViewController.swift */,
 				23560F4229C4F06600E037B1 /* UserFeedCollectionViewModel.swift */,
+				239969B229C526910077664B /* FeedDetailViewController.swift */,
+				239969B429C5272E0077664B /* FeedDetailViewModel.swift */,
 				23560F4429C4F45C00E037B1 /* CustomCell */,
 			);
 			path = FeedView;
@@ -295,11 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239969B529C5272E0077664B /* FeedDetailViewModel.swift in Sources */,
 				23560F3729C3BB1300E037B1 /* SignInViewController.swift in Sources */,
 				23560F2929C288D000E037B1 /* ServiceRequestingImageView.swift in Sources */,
 				23BCFED129C109CB00664804 /* PostListTableViewController.swift in Sources */,
 				23BCFEC129BFD76900664804 /* PostDetailViewModel.swift in Sources */,
 				23560F3C29C3BB4A00E037B1 /* CreateAccountViewController.swift in Sources */,
+				239969B329C526910077664B /* FeedDetailViewController.swift in Sources */,
 				23BCFED329C10A4800664804 /* PostListViewModel.swift in Sources */,
 				23560F4329C4F06600E037B1 /* UserFeedCollectionViewModel.swift in Sources */,
 				23BCFEC629BFD7CB00664804 /* DateHelper.swift in Sources */,

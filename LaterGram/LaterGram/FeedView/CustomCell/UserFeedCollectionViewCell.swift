@@ -9,9 +9,10 @@ import UIKit
 
 class UserFeedCollectionViewCell: UICollectionViewCell {
     
-   
+   // MARK: - Outlets
     @IBOutlet weak var userFeedImageView: ServiceRequestingImageView!
     
+    // MARK: - Functions
     func configureCell(with post: Post) {
         fetchImage(with: post)
     }
@@ -19,4 +20,5 @@ class UserFeedCollectionViewCell: UICollectionViewCell {
     func fetchImage(with post: Post) {
         userFeedImageView.fetchImage(using: post)
     }
+
 }

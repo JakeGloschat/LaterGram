@@ -22,7 +22,7 @@ class PostDetailViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = true
+        //tabBarController?.tabBar.isHidden = true
         setupImageView()
         updateUI()
     }
