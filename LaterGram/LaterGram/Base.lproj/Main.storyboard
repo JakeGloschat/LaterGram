@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -325,22 +326,6 @@
             </objects>
             <point key="canvasLocation" x="3093.8931297709923" y="-51.408450704225352"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8IN-GT-mYq">
-            <objects>
-                <viewController id="kv4-aK-jma" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jLq-Xy-t38">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="PX3-cv-r46"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="sVg-k1-BCB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="npv-oE-JvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="770" y="-51"/>
-        </scene>
         <!--Feed-->
         <scene sceneID="Jjw-4K-MSe">
             <objects>
@@ -353,12 +338,61 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kv4-aK-jma" kind="relationship" relationship="rootViewController" id="4rp-eG-x1m"/>
+                        <segue destination="TBD-BO-zeg" kind="relationship" relationship="rootViewController" id="1Ru-WM-vDG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhJ-bO-iVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-13" y="-51"/>
+        </scene>
+        <!--User Feed Collection View Controller-->
+        <scene sceneID="NQV-Op-Oys">
+            <objects>
+                <collectionViewController id="TBD-BO-zeg" customClass="UserFeedCollectionViewController" customModule="LaterGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="1RI-tK-qpj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gA0-QL-iNN">
+                            <size key="itemSize" width="130" height="130"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="feedCell" id="H8N-ff-StL" customClass="UserFeedCollectionViewCell" customModule="LaterGram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="129.99999999999997" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PpZ-Av-tk7">
+                                    <rect key="frame" x="0.0" y="0.0" width="129.99999999999997" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ifq-Ip-gwu" customClass="ServiceRequestingImageView" customModule="LaterGram" customModuleProvider="target">
+                                            <rect key="frame" x="1" y="1" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ifq-Ip-gwu" secondAttribute="bottom" constant="1" id="4Se-W5-fSe"/>
+                                        <constraint firstItem="ifq-Ip-gwu" firstAttribute="leading" secondItem="PpZ-Av-tk7" secondAttribute="leading" constant="1" id="JSs-Hx-tIZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ifq-Ip-gwu" secondAttribute="trailing" constant="1" id="PRz-zu-7ku"/>
+                                        <constraint firstItem="ifq-Ip-gwu" firstAttribute="top" secondItem="PpZ-Av-tk7" secondAttribute="top" constant="1" id="Pem-5L-SBt"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="userFeedImageView" destination="ifq-Ip-gwu" id="eYg-Yx-CyQ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="TBD-BO-zeg" id="WNF-KV-C7P"/>
+                            <outlet property="delegate" destination="TBD-BO-zeg" id="PA1-K1-beN"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="VTK-e3-dik"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYu-Pk-nly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="-50"/>
         </scene>
         <!--User-->
         <scene sceneID="yQK-Wy-KKn">
